@@ -27,7 +27,7 @@ final_sh.elf:main.o led.o stm32_startup.o
 	$(CC) $(LDFLAGS_SH) -o $@ $^
 
 clean:
-	rm -rf *.o *.elf
+	rm -rf *.o *.elf *.map
 
 load:
 	openocd -f board/stm32f4discovery.cfg
